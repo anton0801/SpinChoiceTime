@@ -4,22 +4,25 @@ struct CategoriesView: View {
     @ObservedObject var appData: AppData
     
     var body: some View {
-        ZStack {
-            Color.themeGradient("Yellow-Purple")
-                .ignoresSafeArea()
-            
-            List(categories, id: \.self) { category in
-                NavigationLink(destination: WheelsInCategoryView(appData: appData, category: category)) {
-                    Text(category)
-                        .font(.headline)
-                        .foregroundColor(.white)
+        NavigationView {
+            ZStack {
+                Color.themeGradient("Yellow-Purple")
+                    .ignoresSafeArea()
+                
+                List(categories, id: \.self) { category in
+                    NavigationLink(destination: WheelsInCategoryView(appData: appData, category: category)) {
+                        Text(category)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+                    .listRowBackground(Color.black.opacity(0.3))
                 }
-                .listRowBackground(Color.black.opacity(0.3))
+                .listStyle(PlainListStyle())
+                .background(Color.clear)
             }
-            .listStyle(PlainListStyle())
-            .background(Color.clear)
+            .navigationTitle("Categories")
         }
-        .navigationTitle("Categories")
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
