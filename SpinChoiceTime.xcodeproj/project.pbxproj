@@ -6,33 +6,114 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F64C2012EFC671D0065C3BB /* ChoiceAppNotificationServiceExt.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8F64C1FA2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F64C2092EFC67C90065C3BB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8F64C2082EFC67C90065C3BB /* FirebaseAnalytics */; };
+		8F64C20B2EFC67C90065C3BB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F64C20A2EFC67C90065C3BB /* FirebaseMessaging */; };
+		8F64C20E2EFC67EF0065C3BB /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8F64C20D2EFC67EF0065C3BB /* AppsFlyerLib */; };
+		8F64C2112EFC6AB00065C3BB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F64C2102EFC6AB00065C3BB /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F64C1FF2EFC671D0065C3BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FD372DA2EF09367009D7590 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F64C1F92EFC671D0065C3BB;
+			remoteInfo = ChoiceAppNotificationServiceExt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F64C2062EFC671D0065C3BB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F64C2012EFC671D0065C3BB /* ChoiceAppNotificationServiceExt.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8F64C1FA2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChoiceAppNotificationServiceExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD372E22EF09367009D7590 /* SpinChoiceTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinChoiceTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8F64C1F52EFC66770065C3BB /* Exceptions for "SpinChoiceTime" folder in "SpinChoiceTime" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8FD372E12EF09367009D7590 /* SpinChoiceTime */;
+		};
+		8F64C2052EFC671D0065C3BB /* Exceptions for "ChoiceAppNotificationServiceExt" folder in "ChoiceAppNotificationServiceExt" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8F64C1F92EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8F64C1FB2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F64C2052EFC671D0065C3BB /* Exceptions for "ChoiceAppNotificationServiceExt" folder in "ChoiceAppNotificationServiceExt" target */,
+			);
+			path = ChoiceAppNotificationServiceExt;
+			sourceTree = "<group>";
+		};
 		8FD372E42EF09367009D7590 /* SpinChoiceTime */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F64C1F52EFC66770065C3BB /* Exceptions for "SpinChoiceTime" folder in "SpinChoiceTime" target */,
+			);
 			path = SpinChoiceTime;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F64C1F72EFC671D0065C3BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F64C2112EFC6AB00065C3BB /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FD372DF2EF09367009D7590 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F64C20B2EFC67C90065C3BB /* FirebaseMessaging in Frameworks */,
+				8F64C2092EFC67C90065C3BB /* FirebaseAnalytics in Frameworks */,
+				8F64C20E2EFC67EF0065C3BB /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F64C20F2EFC6AB00065C3BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FD372D92EF09367009D7590 = {
 			isa = PBXGroup;
 			children = (
 				8FD372E42EF09367009D7590 /* SpinChoiceTime */,
+				8F64C1FB2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */,
+				8F64C20F2EFC6AB00065C3BB /* Frameworks */,
 				8FD372E32EF09367009D7590 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8FD372E22EF09367009D7590 /* SpinChoiceTime.app */,
+				8F64C1FA2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +130,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F64C1F92EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F64C2022EFC671D0065C3BB /* Build configuration list for PBXNativeTarget "ChoiceAppNotificationServiceExt" */;
+			buildPhases = (
+				8F64C1F62EFC671D0065C3BB /* Sources */,
+				8F64C1F72EFC671D0065C3BB /* Frameworks */,
+				8F64C1F82EFC671D0065C3BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8F64C1FB2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */,
+			);
+			name = ChoiceAppNotificationServiceExt;
+			packageProductDependencies = (
+				8F64C2102EFC6AB00065C3BB /* FirebaseMessaging */,
+			);
+			productName = ChoiceAppNotificationServiceExt;
+			productReference = 8F64C1FA2EFC671D0065C3BB /* ChoiceAppNotificationServiceExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8FD372E12EF09367009D7590 /* SpinChoiceTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD372EE2EF09369009D7590 /* Build configuration list for PBXNativeTarget "SpinChoiceTime" */;
@@ -55,16 +160,21 @@
 				8FD372DE2EF09367009D7590 /* Sources */,
 				8FD372DF2EF09367009D7590 /* Frameworks */,
 				8FD372E02EF09367009D7590 /* Resources */,
+				8F64C2062EFC671D0065C3BB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F64C2002EFC671D0065C3BB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8FD372E42EF09367009D7590 /* SpinChoiceTime */,
 			);
 			name = SpinChoiceTime;
 			packageProductDependencies = (
+				8F64C2082EFC67C90065C3BB /* FirebaseAnalytics */,
+				8F64C20A2EFC67C90065C3BB /* FirebaseMessaging */,
+				8F64C20D2EFC67EF0065C3BB /* AppsFlyerLib */,
 			);
 			productName = SpinChoiceTime;
 			productReference = 8FD372E22EF09367009D7590 /* SpinChoiceTime.app */;
@@ -80,6 +190,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					8F64C1F92EFC671D0065C3BB = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					8FD372E12EF09367009D7590 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -94,17 +207,29 @@
 			);
 			mainGroup = 8FD372D92EF09367009D7590;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F64C2072EFC67C90065C3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8F64C20C2EFC67EF0065C3BB /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8FD372E32EF09367009D7590 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8FD372E12EF09367009D7590 /* SpinChoiceTime */,
+				8F64C1F92EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F64C1F82EFC671D0065C3BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FD372E02EF09367009D7590 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +240,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F64C1F62EFC671D0065C3BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FD372DE2EF09367009D7590 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +256,76 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8F64C2002EFC671D0065C3BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F64C1F92EFC671D0065C3BB /* ChoiceAppNotificationServiceExt */;
+			targetProxy = 8F64C1FF2EFC671D0065C3BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8F64C2032EFC671D0065C3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChoiceAppNotificationServiceExt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChoiceAppNotificationServiceExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.choicetimings.SpinChoiceTime.ChoiceAppNotificationServiceExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8F64C2042EFC671D0065C3BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChoiceAppNotificationServiceExt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChoiceAppNotificationServiceExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.choicetimings.SpinChoiceTime.ChoiceAppNotificationServiceExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8FD372EC2EF09369009D7590 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,8 +450,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpinChoiceTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Spin Choice Time";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow to use it";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Spin Choice Time may access minimal device information to ensure smooth operation, refine app features, and improve user experience. This data is used only to support in-app improvements and is not used for personal profiling, cross-app tracking, or third-party advertising.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -265,7 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.choicetimings.SpinChoiceTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -289,8 +493,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpinChoiceTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Spin Choice Time";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow to use it";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Spin Choice Time may access minimal device information to ensure smooth operation, refine app features, and improve user experience. This data is used only to support in-app improvements and is not used for personal profiling, cross-app tracking, or third-party advertising.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -305,7 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.choicetimings.SpinChoiceTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -322,6 +529,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F64C2022EFC671D0065C3BB /* Build configuration list for PBXNativeTarget "ChoiceAppNotificationServiceExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F64C2032EFC671D0065C3BB /* Debug */,
+				8F64C2042EFC671D0065C3BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8FD372DD2EF09367009D7590 /* Build configuration list for PBXProject "SpinChoiceTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -341,6 +557,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F64C2072EFC67C90065C3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+		8F64C20C2EFC67EF0065C3BB /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F64C2082EFC67C90065C3BB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F64C2072EFC67C90065C3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8F64C20A2EFC67C90065C3BB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F64C2072EFC67C90065C3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8F64C20D2EFC67EF0065C3BB /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F64C20C2EFC67EF0065C3BB /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		8F64C2102EFC6AB00065C3BB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F64C2072EFC67C90065C3BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FD372DA2EF09367009D7590 /* Project object */;
 }

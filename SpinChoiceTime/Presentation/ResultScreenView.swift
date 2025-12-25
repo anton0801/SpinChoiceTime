@@ -5,6 +5,7 @@ struct ResultScreenView: View {
     let wheel: Wheel
     let selectedOption: String
     @Environment(\.presentationMode) var presentationMode
+    @State private var scale: CGFloat = 0.5
     
     var body: some View {
         ZStack {
@@ -15,39 +16,35 @@ struct ResultScreenView: View {
             
             VStack {
                 Text("Your choice is:")
-                    .font(.title)
-                    .foregroundColor(.white)
+                    .font(.system(size: 28, design: .rounded))
+                    .foregroundColor(.glowWhite)
                 
                 Text(selectedOption)
-                    .font(.largeTitle.bold())
+                    .font(.system(size: 40, weight: .black, design: .rounded))
                     .foregroundColor(.neonYellow)
-                    .shadow(color: .neonYellow.opacity(0.5), radius: 5)
+                    .shadow(color: .neonYellow, radius: 15)
+                    .scaleEffect(scale)
+                    .onAppear {
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.5)) {
+                            scale = 1.0
+                        }
+                    }
                 
-                HStack {
+                HStack(spacing: 20) {
                     Button("Spin again") {
                         presentationMode.wrappedValue.dismiss()
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.black.opacity(0.3))
-                    .cornerRadius(10)
+                    .buttonStyle(FuturisticButtonStyle())
                     
                     Button("Mark as done") {
-                        // Optional: Could remove or mark, but for now just dismiss
                         presentationMode.wrappedValue.dismiss()
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.black.opacity(0.3))
-                    .cornerRadius(10)
+                    .buttonStyle(FuturisticButtonStyle())
                     
                     Button("Back to wheel") {
                         presentationMode.wrappedValue.dismiss()
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.black.opacity(0.3))
-                    .cornerRadius(10)
+                    .buttonStyle(FuturisticButtonStyle())
                 }
             }
         }

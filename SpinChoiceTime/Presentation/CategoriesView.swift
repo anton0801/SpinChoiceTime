@@ -12,17 +12,20 @@ struct CategoriesView: View {
                 List(categories, id: \.self) { category in
                     NavigationLink(destination: WheelsInCategoryView(appData: appData, category: category)) {
                         Text(category)
-                            .font(.headline)
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
                             .foregroundColor(.white)
+                            .padding()
+                            .background(Color.futuristicGray.opacity(0.4))
+                            .cornerRadius(20)
+                            .shadow(color: .neonYellow, radius: 10)
                     }
-                    .listRowBackground(Color.black.opacity(0.3))
+                    .listRowBackground(Color.clear)
                 }
                 .listStyle(PlainListStyle())
                 .background(Color.clear)
             }
             .navigationTitle("Categories")
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -35,12 +38,18 @@ struct WheelsInCategoryView: View {
     }
     
     var body: some View {
-        List(filteredWheels) { wheel in
-            NavigationLink(destination: WheelScreenView(appData: appData, wheel: wheel)) {
-                WheelCard(wheel: wheel)
+        ZStack {
+            Color.themeGradient("Yellow-Purple")
+                .ignoresSafeArea()
+            
+            List(filteredWheels) { wheel in
+                NavigationLink(destination: WheelScreenView(appData: appData, wheel: wheel)) {
+                    WheelCard(wheel: wheel)
+                }
             }
+            .listStyle(PlainListStyle())
+            .background(Color.clear)
         }
-        .background(Color.themeGradient("Yellow-Purple").ignoresSafeArea())
         .navigationTitle(category)
     }
 }

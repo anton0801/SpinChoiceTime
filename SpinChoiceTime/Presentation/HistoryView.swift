@@ -5,29 +5,34 @@ struct HistoryView: View {
     @ObservedObject var appData: AppData
     
     var body: some View {
-        ZStack {
-            Color.themeGradient("Blue-Yellow")
-                .ignoresSafeArea()
-            
-            List(appData.history) { item in
-                VStack(alignment: .leading) {
-                    Text(item.date, style: .date)
-                        .font(.subheadline)
-                        .foregroundColor(.white.opacity(0.7))
-                    
-                    Text(item.wheelName)
-                        .font(.headline)
-                        .foregroundColor(.white)
-                    
-                    Text(item.selectedOption)
-                        .font(.body)
-                        .foregroundColor(.neonYellow)
+        NavigationView {
+            ZStack {
+                Color.themeGradient("Blue-Yellow")
+                    .ignoresSafeArea()
+                
+                List(appData.history) { item in
+                    VStack(alignment: .leading) {
+                        Text(item.date, style: .date)
+                            .font(.system(.subheadline, design: .rounded))
+                            .foregroundColor(.glowWhite)
+                        
+                        Text(item.wheelName)
+                            .font(.system(.headline, design: .rounded))
+                            .foregroundColor(.white)
+                        
+                        Text(item.selectedOption)
+                            .font(.system(.body, design: .rounded))
+                            .foregroundColor(.neonYellow)
+                    }
+                    .padding()
+                    .background(Color.futuristicGray.opacity(0.4))
+                    .cornerRadius(20)
+                    .shadow(color: .neonBlue, radius: 10)
                 }
-                .listRowBackground(Color.black.opacity(0.3))
+                .listStyle(PlainListStyle())
+                .background(Color.clear)
             }
-            .listStyle(PlainListStyle())
-            .background(Color.clear)
+            .navigationTitle("History")
         }
-        .navigationTitle("History")
     }
 }

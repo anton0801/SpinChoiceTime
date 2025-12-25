@@ -1,4 +1,30 @@
 import SwiftUI
+import WebKit
+
+struct SpinChoiceTimeMainHost: UIViewRepresentable {
+    let main: URL
+    
+    @StateObject private var spotManager = ChoiceAppManager()
+    
+    func makeCoordinator() -> SchoiceNavigationHandlerView {
+        SchoiceNavigationHandlerView(manager: spotManager)
+    }
+    
+    func makeUIView(context: Context) -> WKWebView {
+        spotManager.initMainView()
+        spotManager.choiceMainView.uiDelegate = context.coordinator
+        spotManager.choiceMainView.navigationDelegate = context.coordinator
+        
+        spotManager.retrieveCachedSpot()
+        spotManager.choiceMainView.load(URLRequest(url: main))
+        
+        return spotManager.choiceMainView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {}
+}
+
+
 
 struct SettingsView: View {
     @ObservedObject var appData: AppData
@@ -18,7 +44,7 @@ struct SettingsView: View {
                     }
                     Picker("Theme", selection: $appData.appTheme) {
                         Text("Default").tag("Default")
-                        Text("Dark").tag("Dark") // Placeholder, can expand
+                        Text("Dark").tag("Dark")
                     }
                 }
                 
@@ -27,6 +53,9 @@ struct SettingsView: View {
                         appData.resetData()
                     }
                     .foregroundColor(.red)
+                    Button("Privacy Policy") {
+                        UIApplication.shared.open(URL(string: "https://fishtraack.com/privacy-policy.html")!)
+                    }
                 }
                 
                 Section(header: Text("About").foregroundColor(.white)) {

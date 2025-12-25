@@ -6,20 +6,22 @@ struct CreateWheelView: View {
     @State private var category: String = categories[0]
     @State private var colorTheme: String = colorThemes[0]
     @Environment(\.presentationMode) var presentationMode
-    @State private var showingAddOptions = false
     @State private var newWheel: Wheel?
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Wheel Details").foregroundColor(.white)) {
+                Section(header: Text("Wheel Details").font(.system(.headline, design: .rounded)).foregroundColor(.glowWhite)) {
                     TextField("Wheel name", text: $name)
+                        .textFieldStyle(FuturisticTextFieldStyle())
                     Picker("Category", selection: $category) {
-                        ForEach(categories, id: \.self) { Text($0) }
+                        ForEach(categories, id: \.self) { Text($0).foregroundColor(.white) }
                     }
+                    .pickerStyle(MenuPickerStyle())
                     Picker("Color Theme", selection: $colorTheme) {
-                        ForEach(colorThemes, id: \.self) { Text($0) }
+                        ForEach(colorThemes, id: \.self) { Text($0).foregroundColor(.white) }
                     }
+                    .pickerStyle(MenuPickerStyle())
                 }
                 
                 Button("Create Wheel") {
@@ -27,9 +29,8 @@ struct CreateWheelView: View {
                     appData.wheels.append(wheel)
                     appData.saveData()
                     newWheel = wheel
-                    showingAddOptions = true
                 }
-                .foregroundColor(.neonYellow)
+                .buttonStyle(FuturisticButtonStyle())
             }
             .background(Color.themeGradient("Purple-Blue").ignoresSafeArea())
             .scrollContentBackground(.hidden)
@@ -40,11 +41,23 @@ struct CreateWheelView: View {
                     Button("Cancel") {
                         presentationMode.wrappedValue.dismiss()
                     }
+                    .buttonStyle(FuturisticButtonStyle())
                 }
             }
         }
         .sheet(item: $newWheel) { wheel in
             AddOptionsView(appData: appData, wheel: wheel)
         }
+    }
+}
+
+struct FuturisticTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding()
+            .background(Color.futuristicGray.opacity(0.5))
+            .cornerRadius(15)
+            .shadow(color: .neonBlue, radius: 10)
+            .foregroundColor(.white)
     }
 }
