@@ -8,7 +8,7 @@ import AppTrackingTransparency
 
 struct AppConstants {
     static let appsFlyerAppID = "6756783600"
-    static let appsFlyerDevKey = "P6yhKaXs4oaX3CqSRAh6xc"
+    static let appsFlyerDevKey = "qaGomUbKcyU2sNcvBQnase"
 }
 
 @main
