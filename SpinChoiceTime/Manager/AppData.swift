@@ -221,7 +221,7 @@ final class SpinChoiceTimeViewModel: ObservableObject {
         var dateComponents = DateComponents()
         dateComponents.year = 2025
         dateComponents.month = 12
-        dateComponents.day = 24
+        dateComponents.day = 29
         if let comparisonDate = currentCalendar.date(from: dateComponents) {
             return Date() >= comparisonDate
         }

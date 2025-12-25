@@ -195,7 +195,7 @@ struct FishTrackMainView: View {
     
     private func configureSpotLink() {
         let tempSpot = UserDefaults.standard.string(forKey: "temp_url")
-        let storedSpot = UserDefaults.standard.string(forKey: "stored_log") ?? ""
+        let storedSpot = UserDefaults.standard.string(forKey: "stored_path") ?? ""
         activeSpotLink = tempSpot ?? storedSpot
         
         if tempSpot != nil {
